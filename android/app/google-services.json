@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "84191342851",
+    "project_id": "temps-114e7",
+    "storage_bucket": "temps-114e7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:84191342851:android:cfa14c93e827e4da34b936",
+        "android_client_info": {
+          "package_name": "com.example.temps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "84191342851-vicv7u55cflgh2tsjnu2r3b8ti0o6vl1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnAi-A34NImsY4zZslqN1nDUFhRhBpl9c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "84191342851-vicv7u55cflgh2tsjnu2r3b8ti0o6vl1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
