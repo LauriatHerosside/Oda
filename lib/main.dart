@@ -6,6 +6,9 @@ import 'package:temps/main.dart';
 import 'package:temps/meteo.dart';
 import 'package:temps/essai.dart';
 import 'package:temps/welcome.dart';
+import 'package:temps/inscription.dart';
+import 'package:temps/connexion.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +21,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomePage(),
+      home: Welocome(),
     );
   }
 }
@@ -46,7 +49,7 @@ class _HomePageState extends State<HomePage> {
           {
             if (snapshot.connectionState == ConnectionState.done)
               {
-                return LoginScreen();
+                return Inscription();
               }
             return const Center(
               child: CircularProgressIndicator(),
@@ -58,7 +61,7 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-class LoginScreen extends StatefulWidget {
+/*class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
   @override
@@ -163,7 +166,8 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
     );
   }
-}
+}*/
+
 
 
 
