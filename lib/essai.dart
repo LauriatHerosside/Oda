@@ -4,6 +4,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:temps/welcome.dart';
 
+
 class Essai extends StatefulWidget {
   const Essai({Key? key}) : super(key: key);
 
@@ -49,7 +50,7 @@ class _EssaiState extends State<Essai> {
                   .of(context)
                   .size
                   .width,
-              color: Colors.redAccent,
+              color: Colors.deepOrangeAccent,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
 
@@ -60,8 +61,9 @@ class _EssaiState extends State<Essai> {
                       "Actuellement à Boston", // currently
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600
+                          fontSize: 30,
+                          fontWeight: FontWeight.w600,
+                        fontFamily: 'Signatra'
                       ),
                     ),
                   ),
@@ -71,6 +73,7 @@ class _EssaiState extends State<Essai> {
                       color: Colors.white,
                       fontSize: 40.0,
                       fontWeight: FontWeight.w600,
+                      fontFamily: 'Signatra'
                     ),),
                   Padding(
                     padding: EdgeInsets.only(top: 10.0),
@@ -78,8 +81,9 @@ class _EssaiState extends State<Essai> {
                       currently != null ? currently.toString() : "Loading",
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                        fontFamily: 'Signatra'
                       ),
                     ),
                   ),
@@ -93,17 +97,25 @@ class _EssaiState extends State<Essai> {
                       children: <Widget>[
                         ListTile(
                           leading: FaIcon(FontAwesomeIcons.thermometerHalf),
-                          title: Text("Temperature"),
+                          title: Text("Temperature", style: TextStyle(
+                            fontFamily: 'Signatra',
+                            fontSize: 40,
+                          ),
+                          ),
                           trailing: Text(temp != null
                               ? temp.toString() + "\u00B0"
-                              : "load"),
+                              : "load" ,style: TextStyle( fontSize: 20,
+                          fontFamily: 'Signatra'),),
                         ),
                         ListTile(
                           leading: FaIcon(FontAwesomeIcons.wind),
-                          title: Text("Vitesse du vent"),
+                          title: Text("Vitesse du vent" , style: TextStyle(
+                            fontSize: 40,
+                            fontFamily: 'Signatra'
+                          ),),
                           trailing: Text(windSpeed != null
                               ? windSpeed.toString()
-                              : "load"),
+                              : "load" , style: TextStyle( fontFamily: 'Signatra', fontSize:20 ),),
                         )
                       ]
                   ),
@@ -111,7 +123,12 @@ class _EssaiState extends State<Essai> {
             ),
             Container(
                 child: TextButton(
-                  child: Text('Retour'),
+                  child: Text('Retour',
+                  style: TextStyle(
+                    fontFamily: 'Signatra',
+                    fontSize: 30,
+                    color: Colors.deepOrangeAccent,
+                  ),),
                   onPressed: () async {
                     Navigator.of(context).pushReplacement(
                         MaterialPageRoute(builder: (context) => Welocome()));

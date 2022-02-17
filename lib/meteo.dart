@@ -41,7 +41,7 @@ class _MeteoState extends State<Meteo> {
           Container(
             height: MediaQuery.of(context).size.height  /3,
             width: MediaQuery.of(context).size.width,
-            color: Colors.redAccent,
+            color: Colors.deepOrangeAccent,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
 
@@ -52,7 +52,8 @@ class _MeteoState extends State<Meteo> {
                     "Actuellement à Chicago",// currently
                     style: TextStyle(
                         color: Colors.white,
-                        fontSize: 14,
+                        fontSize: 30,
+                        fontFamily: 'Signatra',
                         fontWeight: FontWeight.w600
                     ),
                   ),
@@ -62,6 +63,7 @@ class _MeteoState extends State<Meteo> {
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 40.0,
+                    fontFamily: 'Signatra',
                     fontWeight: FontWeight.w600,
                   ),),
                 Padding(
@@ -69,8 +71,9 @@ class _MeteoState extends State<Meteo> {
                   child:  Text(
                     currently != null ? currently.toString(): "Loading",
                     style: TextStyle(
+                      fontFamily: 'signatra',
                         color: Colors.white,
-                        fontSize: 14,
+                        fontSize: 20,
                         fontWeight: FontWeight.w600
                     ),
                   ),
@@ -85,13 +88,19 @@ class _MeteoState extends State<Meteo> {
                     children: <Widget>[
                       ListTile(
                         leading: FaIcon(FontAwesomeIcons.thermometerHalf),
-                        title: Text("Temperature"),
-                        trailing: Text(temp != null ? temp.toString()  +"\u00B0" : "load"),
+                        title: Text("Temperature" , style: TextStyle( fontSize: 40, fontFamily: 'signatra'),),
+                        trailing: Text(temp != null ? temp.toString()  +"\u00B0" : "load" , style: TextStyle(
+                          fontFamily: 'signatra', fontSize: 20
+                        ),),
                       ),
                       ListTile(
                         leading: FaIcon(FontAwesomeIcons.wind),
-                        title: Text("Vitesse du vent"),
-                        trailing: Text(windSpeed != null? windSpeed.toString(): "load"),
+                        title: Text("Vitesse du vent" ,style: TextStyle(
+                            fontFamily: 'signatra', fontSize: 40
+                        ),),
+                        trailing: Text(windSpeed != null? windSpeed.toString(): "load" , style: TextStyle(
+                            fontFamily: 'signatra', fontSize: 20
+                        ),),
                       )
 
 
@@ -101,7 +110,11 @@ class _MeteoState extends State<Meteo> {
           ),
           Container(
               child: TextButton(
-                child: Text('Retour'),
+                child: Text('Retour' , style: TextStyle(
+                  fontFamily: 'Signatra',
+                  fontSize: 30,
+                  color: Colors.deepOrangeAccent,
+                ),),
                 onPressed: ()async {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context )=> Welocome()));
                 },

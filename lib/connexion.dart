@@ -57,7 +57,7 @@ class _ConexionState extends State<Conexion> {
               children: <Widget>[
                 Image.asset('images/oda1.png' , height: 200, width: 200),
                 Center(
-                  child: Text('Connectez vous!', style: Theme.of(context).textTheme.titleLarge),
+                  child: Text('Connectez vous!', style: TextStyle( fontSize: 30, fontFamily: 'Signatra') ),
                 ),
                 SizedBox(height: 20),
                 TextFormField(
@@ -99,7 +99,10 @@ class _ConexionState extends State<Conexion> {
                     }
                   },
                   color: Colors.deepOrangeAccent,
-                  child: Text('Se connecter'),
+                  child: Text('Se connecter' , style: TextStyle(
+                    fontFamily: 'Signatra',
+                    fontSize: 30
+                  ),),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
@@ -109,8 +112,11 @@ class _ConexionState extends State<Conexion> {
                   onPressed: (){
                     Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context )=> Inscription ()));
                   },
-                  borderSide:BorderSide(width: 1.0, color: Colors.black) ,
-                  child: Text('Creer un nouveau compte'),
+                  borderSide:BorderSide(width: 1.0, color: Colors.deepOrangeAccent) ,
+                  child: Text('Creer un nouveau compte', style: TextStyle(
+                      fontFamily: 'Signatra',
+                      fontSize: 25
+                  ), ),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),

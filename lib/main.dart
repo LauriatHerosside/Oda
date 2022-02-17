@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Welocome(),
+      home: Conexion (),
     );
   }
 }
@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
           {
             if (snapshot.connectionState == ConnectionState.done)
               {
-                return Inscription();
+                return Conexion();
               }
             return const Center(
               child: CircularProgressIndicator(),

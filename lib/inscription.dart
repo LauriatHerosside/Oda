@@ -59,7 +59,7 @@ String confirmPass ='';
               children: <Widget>[
                 Image.asset('images/oda1.png' , height: 200, width: 200),
                 Center(
-                  child: Text('Creer un nouveau compte', style: Theme.of(context).textTheme.titleLarge),
+                  child: Text('Creer un nouveau compte', style: TextStyle(fontFamily: 'Signatra', fontSize: 30)),
                 ),
                 SizedBox(height: 20),
                 TextFormField(
@@ -116,7 +116,7 @@ String confirmPass ='';
 
                     },
                     color: Colors.deepOrangeAccent,
-                    child: Text('S\'inscrire'),
+                    child: Text('S\'inscrire' , style: TextStyle( fontSize: 30, fontFamily: 'Signatra'),),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
@@ -126,8 +126,8 @@ String confirmPass ='';
                   onPressed: (){
                     Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context )=> Conexion ()));
                   },
-                  borderSide:BorderSide(width: 1.0, color: Colors.black) ,
-                  child: Text('Avez vous dejà un compte?'),
+                  borderSide:BorderSide(width: 1.0, color: Colors.deepOrangeAccent) ,
+                  child: Text('Avez vous dejà un compte?' , style: (TextStyle( fontFamily: 'Signatra', fontSize: 20)),),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
