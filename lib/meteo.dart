@@ -98,7 +98,7 @@ class _MeteoState extends State<Meteo> {
                         title: Text("Vitesse du vent" ,style: TextStyle(
                             fontFamily: 'signatra', fontSize: 40
                         ),),
-                        trailing: Text(windSpeed != null? windSpeed.toString(): "load" , style: TextStyle(
+                        trailing: Text(windSpeed != null? windSpeed.toString() +"Km/h" : "load" , style: TextStyle(
                             fontFamily: 'signatra', fontSize: 20
                         ),),
                       )

@@ -114,7 +114,7 @@ class _EssaiState extends State<Essai> {
                             fontFamily: 'Signatra'
                           ),),
                           trailing: Text(windSpeed != null
-                              ? windSpeed.toString()
+                              ? windSpeed.toString() +"Km/h"
                               : "load" , style: TextStyle( fontFamily: 'Signatra', fontSize:20 ),),
                         )
                       ]

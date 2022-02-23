@@ -10,8 +10,11 @@ import 'package:temps/inscription.dart';
 import 'package:temps/connexion.dart';
 
 
-void main() {
+void main() async {
+WidgetsFlutterBinding.ensureInitialized();
+await Firebase.initializeApp();
   runApp(const MyApp());
+
 }
 
 class MyApp extends StatelessWidget {
